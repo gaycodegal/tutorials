@@ -35,3 +35,7 @@ When you change the environment variables pulled, or wish to change the values o
 ## Run the Demo 
 
     bazel query //bzl:environment.bzl
+	
+It will print out a debug message containing:
+
+    the path is my/test/path
