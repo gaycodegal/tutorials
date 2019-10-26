@@ -8,9 +8,15 @@ Environment variables are hard to load into bazel. Fortunately, repository rules
 
 This command initializes a repository with the specified environment variables present. The location of these variables is derived from the path attribute, the names of these variables comes from the vars attribute, and the values are pulled from the environment.
 
+### Expose the rule
+
+[!BUILD](BUILD)
+
+This build file exposes the rule to be used by the workspace.
+
 ## A Sample Workspace
 
-[!workspace](WORKSPACE)
+[!WORKSPACE](WORKSPACE)
 
 ## A Sample .bashrc
 
