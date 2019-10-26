@@ -1,6 +1,6 @@
 # Environment Variables in Bazel
 
-Environment variables are hard to load into bazel. Fortunately, repository rules are able to access these variables.
+Environment variables are hard to load into bazel. Fortunately, repository rules are able to access these variables. This directory contains all the necessary rules to extract environment variables into skylark variables.
 
 ## Creating the `environment_repository` Rule
 
