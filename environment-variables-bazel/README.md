@@ -1,0 +1,29 @@
+# Environment Variables in Bazel
+
+Environment variables are hard to load into bazel. Fortunately, repository rules are able to access these variables.
+
+## Creating The `environment_repository` Rule
+
+[!environment.bzl](bzl/environment.bzl)
+
+This command initializes a repository with the specified environment variables present. The location of these variables is derived from the path attribute, the names of these variables comes from the vars attribute, and the values are pulled from the environment.
+
+## A Sample Workspace
+
+[!workspace](WORKSPACE)
+
+## A Sample .bashrc
+
+[!.bashrc](.bashrc)
+
+You can export environment variables from your `~/.bashrc` file. To load this sample file, run:
+
+    source .bashrc
+	
+## Updating the environment
+
+When you change the environment variables pulled, or wish to change the values of the environment variables you will have to run
+
+    bazel sync --configure
+	
+

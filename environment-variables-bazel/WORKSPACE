@@ -1,0 +1,14 @@
+# name the workspace
+workspace(name="environment_demo")
+
+# load the rule definition
+load("//bzl:environment.bzl", "environment_repository")
+
+# execute the rule - only runs once, and during `bazel sync --configure`
+environment_repository(name="environment", vars=["TEST_PATH"])
+
+# retreive the values of the environment variables
+load("@environment//:vars.bzl", "TEST_PATH")
+
+# use the value
+print("the path is", TEST_PATH)
