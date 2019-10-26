@@ -2,7 +2,7 @@
 
 Environment variables are hard to load into bazel. Fortunately, repository rules are able to access these variables.
 
-## Creating The `environment_repository` Rule
+## Creating the `environment_repository` Rule
 
 [environment.bzl](bzl/environment.bzl)
 
@@ -32,4 +32,6 @@ When you change the environment variables pulled, or wish to change the values o
 
     bazel sync --configure
 	
+## Run the Demo 
 
+    bazel query //bzl:environment.bzl
